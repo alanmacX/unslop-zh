@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 355" width="980" height="355" font-family="system-ui, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">在线文体门禁的对照实验和设计取舍</title>
+<desc id="chart-desc">左图展示三组实验的分类器分数及真人语料基线，右图是写作自然度与执行开销的定性示意图。</desc>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="20" y="26" font-size="14.5" font-weight="700" fill="#0f172a">Figure 4. Live GPT-6.2-Sol Controlled Experiments: Goodhart's Law vs. Genre-Adaptive Balance</text>
+<line x1="20" y1="36" x2="960" y2="36" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="56" font-size="12.5" font-weight="700" fill="#1e293b">(a) Live GPT-6.2-Sol Subagent A/B/C Benchmark (5 Shared Tasks)</text>
+<text x="62" y="73" font-size="9.5" fill="#475569">P(AI)</text>
+<line x1="62" y1="285.0" x2="470" y2="285.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="55" y="289.0" text-anchor="end" font-size="9.5" fill="#475569">0.00</text>
+<line x1="62" y1="233.8" x2="470" y2="233.8" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="55" y="237.8" text-anchor="end" font-size="9.5" fill="#475569">0.25</text>
+<line x1="62" y1="182.5" x2="470" y2="182.5" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="55" y="186.5" text-anchor="end" font-size="9.5" fill="#475569">0.50</text>
+<line x1="62" y1="131.2" x2="470" y2="131.2" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="55" y="135.2" text-anchor="end" font-size="9.5" fill="#475569">0.75</text>
+<line x1="62" y1="80.0" x2="470" y2="80.0" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="55" y="84.0" text-anchor="end" font-size="9.5" fill="#475569">1.00</text>
+<rect x="90.0" y="107.4" width="46" height="177.6" rx="4" fill="#dc2626" opacity="0.85"/>
+<text x="113.0" y="100.4" text-anchor="middle" font-size="10.5" font-weight="700" fill="#dc2626">0.8662</text>
+<text x="113.0" y="87.4" text-anchor="middle" font-size="8.8" fill="#475569">逗句比 1.41 · 顿号 13.82</text>
+<text x="113.0" y="300" text-anchor="middle" font-size="10" fill="#1e293b">A · 常规风格</text>
+<rect x="192.0" y="149.9" width="46" height="135.1" rx="4" fill="#d97706" opacity="0.85"/>
+<text x="215.0" y="142.9" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b45309">0.6591</text>
+<text x="215.0" y="129.9" text-anchor="middle" font-size="8.8" fill="#475569">逗句比 1.67 · 顿号 17.70</text>
+<text x="215.0" y="300" text-anchor="middle" font-size="10" fill="#1e293b">B · 仅禁词表</text>
+<rect x="294.0" y="267.1" width="46" height="17.9" rx="4" fill="#7c3aed" opacity="0.85"/>
+<text x="317.0" y="260.1" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7c3aed">0.0872</text>
+<text x="317.0" y="247.1" text-anchor="middle" font-size="8.8" fill="#475569">逗句比 5.20 · 顿号 1.42</text>
+<text x="317.0" y="300" text-anchor="middle" font-size="10" fill="#1e293b">C · 在线强门禁</text>
+<text x="317.0" y="313" text-anchor="middle" font-size="10" fill="#1e293b">(Goodhart刷分)</text>
+<rect x="396.0" y="262.7" width="46" height="22.3" rx="4" fill="#15803d" opacity="0.85"/>
+<text x="419.0" y="255.7" text-anchor="middle" font-size="10.5" font-weight="700" fill="#15803d">0.109</text>
+<text x="419.0" y="242.7" text-anchor="middle" font-size="8.8" fill="#475569">逗句比 6.04 · 顿号 2.1</text>
+<text x="419.0" y="300" text-anchor="middle" font-size="10" fill="#1e293b">Human 基线</text>
+<text x="419.0" y="313" text-anchor="middle" font-size="10" fill="#1e293b">(n=1,700)</text>
+<line x1="62" y1="285" x2="470" y2="285" stroke="#64748b" stroke-width="1.2"/>
+<line x1="62" y1="80" x2="62" y2="285" stroke="#64748b" stroke-width="1.2"/>
+<text x="62" y="330" font-size="9.5" fill="#64748b">顿号按每千字计。C 组通过“一逗到底”压低 P(AI)，破坏了正常断句。</text>
+<text x="515" y="56" font-size="12.5" font-weight="700" fill="#1e293b">(b) Engineering Trade-Offs (Qualitative Illustration)</text>
+<rect x="783.3" y="76" width="161.7" height="87.8" fill="#f0fdf4" rx="4"/>
+<text x="937" y="92" text-anchor="end" font-size="9.5" font-weight="700" fill="#15803d">设计目标</text>
+<line x1="560" y1="285" x2="945" y2="285" stroke="#334155" stroke-width="1.2"/>
+<line x1="560" y1="76" x2="560" y2="285" stroke="#334155" stroke-width="1.2"/>
+<text x="752.5" y="309" text-anchor="middle" font-size="10.5" fill="#334155">中文自然度与去模板化程度 →</text>
+<text x="526" y="180.5" text-anchor="middle" transform="rotate(-90 526 180.5)" font-size="10.5" fill="#334155">推理性能保真 &amp; 低延迟 →</text>
+<circle cx="629.3" cy="107.3" r="6.5" fill="#dc2626" stroke="#fff" stroke-width="2"/>
+<text x="576" y="82" text-anchor="start" font-size="10.5" font-weight="700" fill="#dc2626">A · 裸跑默认</text>
+<text x="576" y="95" text-anchor="start" font-size="9" fill="#475569">高AI味 / 性能满格</text>
+<circle cx="721.7" cy="113.6" r="6.5" fill="#d97706" stroke="#fff" stroke-width="2"/>
+<text x="721.7" y="134" text-anchor="middle" font-size="10.5" font-weight="700" fill="#d97706">B · 传统禁词表</text>
+<text x="721.7" y="148" text-anchor="middle" font-size="9" fill="#475569">顿号反弹 / 性能无损</text>
+<circle cx="821.8" cy="213.9" r="6.5" fill="#7c3aed" stroke="#fff" stroke-width="2"/>
+<text x="831.8" y="211.9" text-anchor="start" font-size="10.5" font-weight="700" fill="#7c3aed">C · 在线强门禁循环</text>
+<text x="831.8" y="225.9" text-anchor="start" font-size="9" fill="#475569">高延迟 / Goodhart刷分</text>
+<circle cx="883.4" cy="101.1" r="9" fill="#15803d" stroke="#fff" stroke-width="2"/>
+<text x="937" y="124" text-anchor="end" font-size="10.5" font-weight="700" fill="#15803d">D · natural-tech-zh (v2)</text>
+<text x="937" y="138" text-anchor="end" font-size="9" fill="#475569">单次出稿 / 体裁自适应 / 离线体检</text>
+<text x="515" y="330" font-size="9.5" fill="#64748b">点的位置用于说明设计取舍，不是实测分数或延迟。</text>
+</svg>

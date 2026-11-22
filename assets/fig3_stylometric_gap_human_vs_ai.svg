@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 385" width="980" height="385" font-family="system-ui, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">真人与 AI 回复的文体统计和输出原型</title>
+<desc id="chart-desc">左图按指标比较真人和禁词表上线前后的 AI 回复，右图比较四类输出原型的占比。</desc>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="20" y="26" font-size="14.5" font-weight="700" fill="#0f172a">Figure 3. Stylometric Gap (AUC = 0.9892) &amp; Unsupervised Archetype Regime Shift</text>
+<line x1="20" y1="36" x2="960" y2="36" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="56" font-size="12.5" font-weight="700" fill="#1e293b">(a) Stylometric Features (No Ban-List Matches)</text>
+<rect x="188" y="63" width="10" height="8" rx="1" fill="#15803d"/><text x="202" y="70" font-size="9.5" fill="#166534">Human (n=1,700)</text>
+<rect x="303" y="63" width="10" height="8" rx="1" fill="#94a3b8"/><text x="317" y="70" font-size="9.5" fill="#475569">AI Pre-Ban (3,737)</text>
+<rect x="426" y="63" width="10" height="8" rx="1" fill="#b91c1c"/><text x="440" y="70" font-size="9.5" fill="#991b1b">AI Post-Ban (1,026)</text>
+<text x="180" y="100" text-anchor="end" font-size="10.2" fill="#1e293b">顿号密度 (、/千字)</text>
+<rect x="188" y="82.0" width="28.3" height="8" rx="1.5" fill="#15803d"/>
+<text x="220.3" y="89.2" font-size="8.8" font-weight="600" fill="#15803d">2.1</text>
+<rect x="188" y="91.5" width="198.8" height="8" rx="1.5" fill="#94a3b8"/>
+<text x="390.8" y="98.7" font-size="8.8" font-weight="600" fill="#475569">14.6</text>
+<rect x="188" y="101.0" width="258.3" height="8" rx="1.5" fill="#b91c1c"/>
+<text x="450.3" y="108.2" font-size="8.8" font-weight="600" fill="#b91c1c">19.0 (9.1×)</text>
+<text x="180" y="136" text-anchor="end" font-size="10.2" fill="#1e293b">Markdown 排版密度</text>
+<rect x="188" y="118.0" width="42.2" height="8" rx="1.5" fill="#15803d"/>
+<text x="234.2" y="125.2" font-size="8.8" font-weight="600" fill="#15803d">7.1</text>
+<rect x="188" y="127.5" width="232.3" height="8" rx="1.5" fill="#94a3b8"/>
+<text x="424.3" y="134.7" font-size="8.8" font-weight="600" fill="#475569">39.3</text>
+<rect x="188" y="137.0" width="260.6" height="8" rx="1.5" fill="#b91c1c"/>
+<text x="452.6" y="144.2" font-size="8.8" font-weight="600" fill="#b91c1c">44.1 (6.2×)</text>
+<text x="180" y="172" text-anchor="end" font-size="10.2" fill="#1e293b">标点分布信息熵 (bits)</text>
+<rect x="188" y="154.0" width="119.7" height="8" rx="1.5" fill="#15803d"/>
+<text x="311.7" y="161.2" font-size="8.8" font-weight="600" fill="#15803d">1.10</text>
+<rect x="188" y="163.5" width="235.0" height="8" rx="1.5" fill="#94a3b8"/>
+<rect x="188" y="173.0" width="236.1" height="8" rx="1.5" fill="#b91c1c"/>
+<text x="428.1" y="180.2" font-size="8.8" font-weight="600" fill="#b91c1c">2.17</text>
+<text x="180" y="208" text-anchor="end" font-size="10.2" fill="#1e293b">句号密度 (。/千字)</text>
+<rect x="188" y="190.0" width="68.9" height="8" rx="1.5" fill="#15803d"/>
+<text x="260.9" y="197.2" font-size="8.8" font-weight="600" fill="#15803d">11.4</text>
+<rect x="188" y="199.5" width="218.8" height="8" rx="1.5" fill="#94a3b8"/>
+<rect x="188" y="209.0" width="244.2" height="8" rx="1.5" fill="#b91c1c"/>
+<text x="436.2" y="216.2" font-size="8.8" font-weight="600" fill="#b91c1c">40.4</text>
+<text x="180" y="244" text-anchor="end" font-size="10.2" fill="#1e293b">逗句比 (，/ 。)</text>
+<rect x="188" y="226.0" width="252.8" height="8" rx="1.5" fill="#15803d"/>
+<text x="444.8" y="233.2" font-size="8.8" font-weight="600" fill="#15803d">6.04</text>
+<rect x="188" y="235.5" width="44.4" height="8" rx="1.5" fill="#94a3b8"/>
+<rect x="188" y="245.0" width="42.3" height="8" rx="1.5" fill="#b91c1c"/>
+<text x="234.3" y="252.2" font-size="8.8" font-weight="600" fill="#b91c1c">1.01</text>
+<text x="180" y="280" text-anchor="end" font-size="10.2" fill="#1e293b">整句突发性 (B)</text>
+<line x1="458" y1="260" x2="458" y2="290" stroke="#64748b"/>
+<rect x="440.7" y="262.0" width="17.3" height="8" rx="1.5" fill="#15803d"/>
+<text x="436.7" y="269.2" text-anchor="end" font-size="8.8" font-weight="600" fill="#15803d">-0.064</text>
+<rect x="388.6" y="271.5" width="69.4" height="8" rx="1.5" fill="#64748b"/>
+<text x="384.6" y="278.7" text-anchor="end" font-size="8.8" font-weight="600" fill="#64748b">-0.257</text>
+<rect x="372.9" y="281.0" width="85.0" height="8" rx="1.5" fill="#b91c1c"/>
+<text x="368.9" y="288.2" text-anchor="end" font-size="8.8" font-weight="600" fill="#b91c1c">-0.315</text>
+<text x="463" y="280" font-size="9" fill="#475569">0</text>
+<text x="180" y="316" text-anchor="end" font-size="10.2" fill="#1e293b">盲测统计 P(AI)</text>
+<rect x="188" y="298.0" width="29.6" height="8" rx="1.5" fill="#15803d"/>
+<text x="221.6" y="305.2" font-size="8.8" font-weight="600" fill="#15803d">0.109</text>
+<rect x="188" y="307.5" width="243.4" height="8" rx="1.5" fill="#94a3b8"/>
+<text x="435.4" y="314.7" font-size="8.8" font-weight="600" fill="#475569">0.895</text>
+<rect x="188" y="317.0" width="235.0" height="8" rx="1.5" fill="#b91c1c"/>
+<text x="427.0" y="324.2" font-size="8.8" font-weight="600" fill="#b91c1c">0.864</text>
+<text x="188" y="345" font-size="9.5" fill="#475569">每行使用独立刻度，条长仅在同一指标内可比。</text>
+<text x="575" y="56" font-size="12.5" font-weight="700" fill="#1e293b">(b) K-Means Output Archetypes (N = 4,588)</text>
+<text x="585" y="88" font-size="11" font-weight="600" fill="#334155">10/22 前无禁词基线 (n=3,654)</text>
+<rect x="585.0" y="96" width="170.3" height="34" fill="#2563eb" stroke="#fff" stroke-width="1.2"/>
+<text x="670.1" y="117" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">47.3%</text>
+<rect x="755.3" y="96" width="87.5" height="34" fill="#7c3aed" stroke="#fff" stroke-width="1.2"/>
+<text x="799.0" y="117" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">24.3%</text>
+<rect x="842.8" y="96" width="82.8" height="34" fill="#15803d" stroke="#fff" stroke-width="1.2"/>
+<text x="884.2" y="117" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">23.0%</text>
+<rect x="925.6" y="96" width="19.4" height="34" fill="#dc2626" stroke="#fff" stroke-width="1.2"/>
+<text x="585" y="164" font-size="11" font-weight="600" fill="#334155">10/22 后应用禁词表 (n=934)</text>
+<rect x="585.0" y="172" width="87.5" height="34" fill="#2563eb" stroke="#fff" stroke-width="1.2"/>
+<text x="628.7" y="193" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">24.3%</text>
+<rect x="672.5" y="172" width="45.7" height="34" fill="#7c3aed" stroke="#fff" stroke-width="1.2"/>
+<text x="695.3" y="193" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">12.7%</text>
+<rect x="718.2" y="172" width="203.4" height="34" fill="#15803d" stroke="#fff" stroke-width="1.2"/>
+<text x="819.9" y="193" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">56.5%</text>
+<rect x="921.6" y="172" width="23.4" height="34" fill="#dc2626" stroke="#fff" stroke-width="1.2"/>
+<rect x="585" y="227" width="10" height="10" rx="2" fill="#2563eb"/>
+<text x="599" y="236" font-size="10.2" fill="#1e293b">原型 A: 列表瀑布型</text>
+<rect x="767" y="227" width="10" height="10" rx="2" fill="#7c3aed"/>
+<text x="781" y="236" font-size="10.2" fill="#1e293b">原型 C: 伪专业长篇说教型</text>
+<rect x="585" y="247" width="10" height="10" rx="2" fill="#15803d"/>
+<text x="599" y="256" font-size="10.2" fill="#1e293b">原型 B: 均质短评节拍器型</text>
+<rect x="767" y="247" width="10" height="10" rx="2" fill="#dc2626"/>
+<text x="781" y="256" font-size="10.2" fill="#1e293b">原型 D: 首行加粗免责型</text>
+<rect x="585" y="274" width="360" height="74" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+<text x="595" y="294" font-size="10.5" font-weight="700" fill="#0f172a">Regime Shift Finding (一刀切禁词的副作用):</text>
+<text x="595" y="312" font-size="10" fill="#334155">• 长篇说教与列表瀑布从 71.6% 降至 37.0%</text>
+<text x="595" y="328" font-size="10" fill="#334155">• 但模型大规模逃逸进“均质节拍器短评” (23.0% → 56.5%)</text>
+<text x="595" y="344" font-size="10" fill="#334155">• “首行加粗免责型”对禁词免疫，反升至 6.5%</text>
+<text x="20" y="375" font-size="9.5" fill="#64748b">Classifier: L2 Logistic Regression on 16 features, no ban-list match counts (80/20 split, Test Acc = 95.59%, AUC = 0.9892).</text>
+</svg>
