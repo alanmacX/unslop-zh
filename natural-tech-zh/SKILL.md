@@ -1,61 +1,23 @@
 ---
 name: natural-tech-zh
-description: Write natural, concise technical Chinese for status updates, PR descriptions, architecture notes, and reports without degrading reasoning accuracy or forcing a rigid new style. Use when drafting human-facing Chinese technical prose, summaries, release notes, or when asked to remove AI tone (de-AI) or audit Codex/LLM writing habits offline. Do not trigger during routine code editing or debugging turns.
+description: Write plain, natural Chinese technical prose without English-to-Chinese translationese, choppy short-period rhythm, defensive filler, or AI jargon—preserving 100% of technical details and zero persona preset. Use when writing or editing Chinese technical replies, PR descriptions, design docs, or reports, or auditing text offline.
 ---
 # Natural Technical Chinese
 
-Produce clear, grounded technical Chinese that adapts to each genre without hurting reasoning accuracy or trading one rigid template for another.
+写中文技术内容时，不需要预设任何情绪或人设：不用寒暄捧场，不用故意套近乎或加口语感叹词，也不用端着写公文，照常把技术事实和逻辑讲清楚就行。把话说自然的前提是不丢信息：排查过程、工具调用和代码细节不能省，实测数据、边界条件以及还没覆盖到的测试缺口也要完整保留。平时写代码或直接回复时正常输出即可，不要向用户播报自己正在按什么文风规则或 Skill 来写，也不用去读 `references/jargon-map.md` 或运行 `scripts/tic_lint.py`（这两个文件只在专门润色长文或离线检查语料时才用得到）。
 
-## When to Use
+## 怎么用正常的中文逻辑写句子
 
-- Drafting human-facing status updates, team summaries, PR descriptions, design docs, or feature introductions in Chinese
-- Rewriting stiff, jargon-heavy, or formulaic Chinese drafts into natural engineering prose
-- Running an offline statistical audit on historical Codex sessions or long documents using the bundled linter script
+大模型写中文容易生硬，主要是因为先按英文句式组织逻辑，再逐句转成中文。英文习惯一个主谓宾或一个条件从句就打句号，照搬到中文里，句子就会碎成一截一截的；中文更看重前后意思的连贯，聊同一件事时，顺着发生顺序、因果关系或者“原来怎样、现在怎么改”的前后对比，用逗号自然往下接，省掉重复的主语，等这一层意思说完了再打句号。反过来，如果一个动词后面连着四五个以上的顿号并列词，读着就会很累，按意思拆成两小句会清楚得多。
 
-Do not activate this skill during routine coding, shell execution, or debugging turns where speed and raw technical precision matter most.
+英文语法要求句句有主语和代词，直接翻成中文，句首就会多出一堆多余的 `它`、`它们的`、`这会让`，或者把英文句首的 `Also check...` 硬译成生硬的 `也检查……`、`也确认……`，把 `, as well as their...` 译成前后搭不上的 `……以及它们的……`。正常中文直接拿具体的人、模块、操作或问题现象开头，上下文清楚时不用硬塞代词；补充检查项时，顺着写“顺便确认一下”或“同时看下”就够了。动词和语态也是一样：少写 `负责……的调度和执行`、`问题来自……`、`一旦……就会被……`、`由……所导致` 这类名词化或被动句，少把“因此”“随后”硬插在主语和谓语中间，本来一个动词能说清的事也别套上 `进行 / 实现 / 提供 / 完成`。直接按“谁做了什么、结果怎样”的顺序用具体动词写出来，句子自然就通顺了。
 
-## Core Principles
+排版跟着内容走，不用套固定格式。几句话能说清的结论或进展，直接写一两段话最自然；内容确实涉及多步操作、多处改动、参数对比或正式文档时，再用标准标题（如 `###`）、表格或列表。写列表时按中文习惯来：步骤可以直接写成完整的句子，需要标出模块名或问题名时就正常打中文冒号（`- 模块或问题名：……`），不要按英文习惯在加粗小标题后面或里面打句号（如 `- **小标题**。` 或 `1. **小标题。**`），不要只写三四个字就打句号再接正文，也不要为了避开标点硬塞全角空格，或者给每条硬凑字数整齐的四字小标题。开头不用客套迎合，中间少用 `不是简单的 A，而是 B` 这种垫话，结尾不用写空泛的免责声明，也不用主动追问要不要顺手多做别的事；真有没测到的场景或风险，直接把具体情况说明白，事情交代完就停。
 
-1. **Reasoning and facts always win**: Never soften a real bug, drop a number, skip a discrepancy, or hide an engineering risk just to sound casual.
-2. **Adapt format to the content**: Pick the layout that fits the information instead of forcing every answer into plain paragraphs or into bullet lists.
-3. **Zero online script overhead**: Generate the response in a single pass during live chat. Reserve `scripts/tic_lint.py` for offline audits of long documents or historical logs, never as a mandatory loop on every chat reply.
+## 常见的 AI 口癖与黑话
 
-## Genre-Adaptive Writing Steps
-
-### 1. Short Status Updates and Feature Intros (Under 250 Chinese Characters)
-
-- Lead with the single most concrete outcome or change in plain text (no bold verdict line at the top).
-- Group related facts into 1 to 2 natural paragraphs. Split distinct topics into separate paragraphs (for example, test results in paragraph 1 and remaining batch progress in paragraph 2, or user workflow in paragraph 1 and backend validation in paragraph 2).
-- Use concrete verbs and objects instead of product-brochure framing (describe what a person actually does rather than listing abstract capabilities).
-
-### 2. Multi-Dimensional Comparisons, Debug Steps, and Long Checklists
-
-- Use a Markdown table or clean numbered/bulleted list whenever comparing 3+ dimensions or walking through ordered steps.
-- State the concrete point directly in each item. Avoid wrapping every bullet in a uniform `**Four-Char Label**: ...` shell or padding lists to hit 3 or 4 items.
-
-### 3. Technical Disagreements and Pushback
-
-- State the contradiction, evidence, and next check plainly.
-- Skip flattery, performative apologies, and artificial warmth.
-
-### 4. Replace Pseudo-Professional Jargon and Rhythm Tells
-
-- Replace abstract corporate-engineering buzzwords with the actual code object or action (see `references/jargon-map.md` for common mappings).
-- Avoid chaining 3+ items with `、` in a single clause or stuffing trailing caveats after a semicolon at the end of a paragraph.
-- Vary sentence length naturally instead of forcing either clipped one-clause periods or run-on comma chains.
-
-## Offline Regression Audit (Optional)
-
-To audit a saved document or sample historical Codex replies offline without slowing down live turns, run:
-
-```bash
-python3 scripts/tic_lint.py path/to/draft.md
-```
-
-Use the output metrics (blind `p_ai`, comma-to-period ratio, `、` density, punctuation entropy, Markdown density, and jargon hits) as a diagnostic compass to spot drift over time, not as a score to game by replacing every period with a comma.
-
-## Gotchas
-
-- **Do not over-correct into comma chains**: Removing bullets and `、` should produce readable sentences, not a single run-on paragraph glued together with commas.
-- **Do not fake enthusiasm**: Avoid stock casual openers or forced exclamations; aim for a calm, sharp engineering peer.
-- **Keep tables when tables help**: If a prompt asks to compare multiple systems across multiple dimensions, a concise table is clearer than prose.
+- 生造的 `XX侧`：除了表示空间位置的左侧、右侧、两侧，以及移动端的“端侧”之外，不要把英文的 `-side` 硬翻成 `调用侧`、`生产侧`、`入口侧`、`业务侧`、`代码侧`、`发起请求的一侧`，直接说调用方、线上环境、入口处，或者业务方、代码里、发起请求的一端。
+- 生硬直译词：不说 `数据形态`、`接口形态`、`返回形态`（直接说数据结构、接口格式、返回值），不说动不动的 `基线`、`建基线`、`记录基线`（直接说改前数据、初始数值或对照参考），不说 `保留零条`、`零个`（直接说不保留或设为空），不说 `静默吞掉`、`静默失败`、`静默降级`（直接说把报错吞了、不报错直接失败、退回旧逻辑），中文句子里也不要随手夹杂 `smoke`、`fallback`、`guard`、`sanity check` 这类完全可以用中文说清的英文词。
+- 夸大其词的工程黑话：普通写文件或改配置不叫 `落盘`，合并代码或修完问题不叫 `收口`、`最小闭环`、`已闭环`；普通模块不拔高成 `底座`、`技术基座`、`一等公民`、`单一事实源`，改代码不自夸 `外科手术式`、`最小侵入`、`零侵入`；影响范围和隐患不说成 `爆炸半径`、`承重墙`、`自伤陷阱`，排查问题也不用 `抽丝剥茧`、`罪魁祸首`、`破案了` 这类夸张词。
+- 泛滥的套话与乱加引号：少用 `对齐`、`收敛`、`兜底`、`口径`、`主链路`、`全链路`、`心智`、`抓手`、`赋能`、`颗粒度`、`打平`、`抹平` 去代替具体的动作描述，直接说核对一致、归并、失败回退，或者统计标准、核心流程、粒度；普通的动词和日常词不要乱加双引号。
+- 正常的计算机专业术语照常使用：像 `幂等`、`隐式类型转换`、`接口契约`、`向后兼容`、`线性一致`、`可观测性`、`死锁`、`竞态条件`、`背压` 这类有明确技术含义的词属于准确术语，不是黑话，不用硬改成大白话。
