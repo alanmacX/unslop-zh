@@ -22,7 +22,7 @@ Even without buzzwords, models that draft latent English clauses and translate 1
 | :--- | :--- | :--- |
 | **Non-spatial `XX侧`** (`调用侧 / 生产侧 / 代码侧 / 入口侧 / 业务侧 / 发起请求的一侧`) | Mechanical `-side` calque | `调用方 / 线上环境 / 代码里 / 入口处 / 业务方 / 发起请求的一端` *(keep only spatial `左/右/两侧` and mobile `端侧`)* |
 | `数据形态 / 接口形态 / 返回形态 / 目标形态` | Calque of *data/API shape* | `数据结构 / 接口格式 / 返回值结构` |
-| `基线 / 建基线 / 记录基线 / 保留基线` | Mechanical calque of *baseline* | `改前数据 / 初始数值 / 原来的结果 / 对照组` |
+| `基线 / 建基线 / 记录基线 / 保留基线` | Mechanical calque of *baseline* | `改前数据 / 初始数值 / 原来的结果 / 对照参考` |
 | `保留零条 / 零个…` | Calque of *keep zero items* | `不保留 / 设为空` |
 | `最小闭环 / 完整闭环 / 已闭环` | Overused workflow cliché | `从头跑通 / 拿样本测通 / 测完了` |
 | `收口 / 逻辑收口 / 权限收口` | Post-ban substitute for 闭环 | `归并到一处 / 统一走某处 / 定案` |
@@ -33,10 +33,16 @@ Even without buzzwords, models that draft latent English clauses and translate 1
 | `承重逻辑 / 爆炸半径 / 自伤陷阱` | *Load-bearing / blast radius / footgun* | `核心依赖 / 影响范围 / 容易踩的坑` |
 | `全程只读 / 不污染工作区 / 不把猜测当根因` | Methodological virtue-signaling | *Omit routine hygiene; report actual checks and changes* |
 | `破案了 / 罪魁祸首 / 你说得对 / 如果你愿意…` | Melodrama / flattery / chatbait | *Delete* |
-| `不能保证全量无误 / 不能据此宣称` | Generic CYA tail | *Delete generic CYA; state concrete untested gaps plainly* |
+| `不能保证全量无误 / 不能据此宣称 / 仍需线上观察确认` | Generic CYA liability tail | *Delete generic CYA; state only concrete untested scenarios plainly* |
 | Inline `smoke / fallback / guard / sanity check` in Chinese prose | Untranslated CoT spillover | `冒烟测试 / 失败回退 / 前置检查 / 基础自检` |
 
-## Part 3: Tier 2 High-Drift Words (Control Density) & Tier 3 Protected CS Terms (Keep Intact)
+## Part 3: Eliminating Defensive Padding & Liability Disclaimers
+
+- **Keep technical preconditions, drop procedural filler**: Retain concrete conditions that affect technical behavior (e.g., whether a file descriptor or lock is still held), and omit zero-information procedural qualifiers (`按现有流程操作`、`经评估确认后`、`安排维护窗口`).
+- **Address concrete flaws directly before secondary branches**: When fixing a reported mistake in a prior config or snippet, state what that flaw causes and how to fix it directly instead of opening with defensive disclaimers (`单凭现有信息还无法断定…`). Place secondary possibilities briefly in post-fix checks if relevant.
+- **State bounded test gaps only**: Name only the specific scenario tied to the current change that remains untested; do not expand into unrelated theoretical failure modes or append generic `仍需线上观察确认` tails.
+
+## Part 4: High-Drift Filler Words & Protected CS Terms
 
 - **Avoid stacking post-ban filler words**: Keep `收敛`, `口径`, `对齐`, `兜底`, `主链路/全链路`, `收紧/放宽`, `心智`, `抓手`, `赋能`, `颗粒度` from crowding out plain verbs (`归并`, `统计标准`, `核对一致`, `失败回退`, `核心流程`, `粒度`).
 - **Always preserve genuine CS terminology**: Keep `幂等`, `隐式/显式类型转换`, `接口契约`, `向后兼容`, `线性一致`, `可观测性`, `死锁`, `竞态条件`, `背压`, `边界条件`, `锁粒度 / 采样粒度` intact.
